@@ -19,14 +19,14 @@ function Navbar(props) {
                             </li>
                         </ul>
                     </div>
-                    <div class="btn-group">
-                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                    <div className="btn-group">
+                        <button className="btn btn-secondary btn-sm dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
                             No of Users per page
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                            <li><span class="dropdown-item" onClick={()=>{props.setresultsperpage(10)}}>10</span></li>
-                            <li><span class="dropdown-item" onClick={()=>{props.setresultsperpage(20)}}>20</span></li>
-                            <li><span class="dropdown-item" onClick={()=>{props.setresultsperpage(30)}}>30</span></li>
+                        <ul className="dropdown-menu" aria-labelledby="defaultDropdown">
+                            <li><span className="dropdown-item" onClick={()=>{props.setresultsperpage(10)}}>10</span></li>
+                            <li><span className="dropdown-item" onClick={()=>{props.setresultsperpage(20)}}>20</span></li>
+                            <li><span className="dropdown-item" onClick={()=>{props.setresultsperpage(30)}}>30</span></li>
                         </ul>
                     </div>
 

@@ -7,11 +7,11 @@ function Users(props) {
     const dstyle= {
         width:'400px',
         fontSize:'20px',
-        height:'40px',
+        height:'45px',
         backgroundColor:'#adadad',
     }
     // styling to body of table
-    const style={height:'30px',border:'0.5px solid black'};
+    const style={height:'35px',border:'0.5px solid black'};
 
     //function to handle click on each user
     const display=(user)=>{
@@ -24,14 +24,14 @@ function Users(props) {
             <div className='container text-center'>
 
                 {/* html table to display the list of users */}
-                <table border={1}>
+                <table  border={1}>
                     <thead>
                         <tr>
-                            <th style={dstyle}>Name</th>
-                            <th style={dstyle}>Gender</th>
-                            <th style={dstyle}>City</th>
-                            <th style={dstyle}>State</th>
-                            <th style={dstyle}>Country</th>
+                            <th scope="col" style={dstyle}>Name</th>
+                            <th scope="col" style={dstyle}>Gender</th>
+                            <th scope="col" style={dstyle}>City</th>
+                            <th scope="col" style={dstyle}>State</th>
+                            <th scope="col" style={dstyle}>Country</th>
                         </tr>
                     </thead>
                     <tbody>

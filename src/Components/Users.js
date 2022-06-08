@@ -3,12 +3,17 @@ import {useNavigate} from 'react-router-dom'
 import { Link, } from 'react-router-dom';
 function Users(props) {
     const Navigate=useNavigate();
+    //styling to header of table
     const dstyle= {
         width:'400px',
         fontSize:'20px',
+        height:'40px',
         backgroundColor:'#adadad',
     }
-    const style={height:'30px',border:'1px solid black'};
+    // styling to body of table
+    const style={height:'30px',border:'0.5px solid black'};
+
+    //function to handle click on each user
     const display=(user)=>{
         props.getbirthday(user);
         props.setmyuser(user);

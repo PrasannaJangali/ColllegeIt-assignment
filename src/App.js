@@ -17,11 +17,17 @@ import {
 function App() {
   //create user object for displaying on click
   const [user, setuser] = useState({});
-
+  
   //function for updating user on-reclick
   const setmyuser=(user)=>{
     setuser(user);
   }
+//number of results per page
+  const [results, setresults] = useState(10);
+  const setresultsperpage=(results)=>{
+    setresults(results);
+  }
+
   //state to display days remaining for birthday
   const [days, setdays] = useState(0);
 
@@ -42,10 +48,10 @@ function App() {
     //Router setup
     <>
     <Router>
-    <Navbar />
+    <Navbar setresultsperpage={setresultsperpage} />
     <Routes>
       {/* static route for displaying a list of users */}
-      <Route exact path="/" element={<Home setmyuser={setmyuser} getbirthday={getbirthday}/>}></Route>
+      <Route exact path="/" element={<Home results={results} setmyuser={setmyuser} getbirthday={getbirthday}/>}></Route>
 
       {/* dynamic route for each user to display his photo,days left for birthday,phone */}
       <Route  path={`/:id`} element={<Display user={user} days={days} />}></Route>

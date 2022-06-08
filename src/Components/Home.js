@@ -14,14 +14,14 @@ function Home(props) {
   const [loading, setloading] = useState(false);
   const fetchdata = async () => {
     setloading(true);
-    let response = await fetch('https://randomuser.me/api/?results=10')
+    let response = await fetch(`https://randomuser.me/api/?results=${props.results}`)
     let b = await response.json();
     setloading(false);
     setitems(b.results);
   }
   useEffect(() => {
     fetchdata();
-  }, [])
+  }, [props.results])
 
   return (
     <>

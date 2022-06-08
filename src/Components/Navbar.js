@@ -2,7 +2,8 @@ import React from 'react'
 import {
     Link,
 } from 'react-router-dom';
-function Navbar() {
+function Navbar(props) {
+    
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-light">
@@ -16,11 +17,19 @@ function Navbar() {
                             <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/about">About</Link>
-                            </li>
                         </ul>
                     </div>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                            No of Users per page
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                            <li><span class="dropdown-item" onClick={()=>{props.setresultsperpage(10)}}>10</span></li>
+                            <li><span class="dropdown-item" onClick={()=>{props.setresultsperpage(20)}}>20</span></li>
+                            <li><span class="dropdown-item" onClick={()=>{props.setresultsperpage(30)}}>30</span></li>
+                        </ul>
+                    </div>
+
                 </div>
             </nav>
         </div>
